@@ -9,7 +9,6 @@
   "author": "Joshua Smith",
   "license": "ISC",
   "dependencies": {
-    "git": "^0.1.5",
     "musicmetadata": "^2.0.5",
     "sqlite3": "^3.1.13"
   }
