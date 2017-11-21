@@ -37,7 +37,7 @@ const attemptMatch = (song) => {
                 const genre = metadata.genre && metadata.genre[0] || null;
                 const duration = metadata.duration || null;
                 musicdb.serialize(() => {
-                    stmt = musicdb.prepare("INSERT OR REPLACE INTO MUSIC(size, title, artist, albumartist, album, year, trackno, trackof, genre, duration, location) VALUES(?,?,?,?,?,?,?,?,?,?,?)");
+                    stmt = musicdb.prepare("INSERT INTO MUSIC(size, title, artist, albumartist, album, year, trackno, trackof, genre, duration, location) VALUES(?,?,?,?,?,?,?,?,?,?,?)");
                     stmt.run(size, title, artist, albumartist, album, year, trackno, trackof, genre, duration, song);
                     console.log('new song added to database', song);
                 });
